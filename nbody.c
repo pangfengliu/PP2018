@@ -38,8 +38,8 @@ int main()
 
   double dt = 0.000001;
   for (int me = 0; me < N; me++) {
-    particles[me].x += particles[me].ax * dt;
-    particles[me].y += particles[me].ay * dt;
-    particles[me].z += particles[me].az * dt;
+    particles[me].x += 0.5 * particles[me].ax * dt * dt;
+    particles[me].y += 0.5 * particles[me].ay * dt * dt;
+    particles[me].z += 0.5 * particles[me].az * dt * dt;
   }  
 }
