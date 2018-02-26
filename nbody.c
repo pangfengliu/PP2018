@@ -31,9 +31,9 @@ int main()
       double dz = particles[other].z - particles[me].z;
       double factor = particles[other].mass /
 	((dx * dx) + (dy * dy) + (dz * dz));
-      particles[me].ax = dx * factor;
-      particles[me].ay = dy * factor;
-      particles[me].az = dz * factor;
+      particles[me].ax += dx * factor;
+      particles[me].ay += dy * factor;
+      particles[me].az += dz * factor;
     }
 
   double dt = 0.000001;
