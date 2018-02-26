@@ -29,7 +29,7 @@ int main()
       double dx = particles[other].x - particles[me].x;
       double dy = particles[other].y - particles[me].y;
       double dz = particles[other].z - particles[me].z;
-      double factor = (dx * dx) + (dy * dy) + (dz * dz);
+      double factor = 1.0 / ((dx * dx) + (dy * dy) + (dz * dz));
       particles[me].ax = dx * particles[other].mass;
       particles[me].ay = dy * particles[other].mass;
       particles[me].az = dz * particles[other].mass;
